@@ -63,3 +63,42 @@ button:hover {
   font-size: 17px;
   transition: all 0.3s ease;
 }
+
+/* Media Query für Smartphones (max. 768px Breite) */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%; /* Nutzt 90% der Bildschirmbreite*/
+    margin: 10px auto; /* Zentriert den Wrapper mit etwas Abstand oben/unten */
+    padding: 0.8rem;
+  }
+
+  .question {
+    font-size: 1.5rem; /* Etwas kleinere Schrift */
+    text-align: center;
+  }
+
+  .question-grid {
+    /* Buttons untereinander statt nebeneinander */
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .answers {
+    padding: 1.2rem;
+    font-size: 18px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .funktion {
+    flex: 1; /* Buttons teilen sich den Platz gleichmäßig auf */
+    max-width: 150px;
+    padding: 1rem;
+    font-size: 16px;
+  }
+}
