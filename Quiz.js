@@ -55,7 +55,9 @@ const questions = [
 
 let currentIndex = 0;
 let currentCorrectAnswerId = "";
-
+document.addEventListener("DOMContentLoaded", () => {
+  renderQuestion();
+});
 //Frage rendern
 
 function renderQuestion() {
@@ -66,6 +68,10 @@ function renderQuestion() {
       "<p> Quiz beendet! </p>";
     return;
   }
+
+  // const resetButton = document.createElement("button");
+  // resetButton.textContent = "Wiederholen";
+  // resetButton.classList.add("funktion");
 
   const question = questions[currentIndex];
   currentIndex++;
@@ -119,6 +125,12 @@ function renderQuestion() {
   wrapperDiv.appendChild(questionGrid);
 
   document.getElementById("question-display").appendChild(wrapperDiv);
+}
+
+function reset() {
+  currentIndex = 0;
+  document.getElementById("question-display").innerHTML = "";
+  renderQuestion();
 }
 
 function solution() {

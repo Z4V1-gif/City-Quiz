@@ -7,6 +7,14 @@ p {
   font-size: 50px;
   padding: 2rem;
 }
+
+.show-question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -53,6 +61,11 @@ button:hover {
 
 .buttons {
   padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .funktion {
